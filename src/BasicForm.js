@@ -97,10 +97,10 @@ const BasicForm = () => {
         initialValues={{ name:"", email:"", phone:"", blog:""}}
         validationSchema={validationSchema}
         onSubmit={(values, {setSubmitting, resetForm}) => {
-            // When button submits form and form is in the process of submitting, submit button is disabled
-            setSubmitting(true);
+          // When button submits form and form is in the process of submitting, submit button is disabled
+          setSubmitting(true);
 
-            // Simulate submitting to database, shows us values submitted, resets form
+          // Simulate submitting to database, shows us values submitted, resets form
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
